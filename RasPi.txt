@@ -1,0 +1,70 @@
+Compile base-7.0.2.2
+compile asyn {I included seq, and asyn dependencies, but these should not be necessary }
+
+
+git clone https://github.com/labapart/gattlib {In /epics/support }
+cd gattlib
+mkdir build
+cd build
+sudo apt install cmake {cmake is not included in Rasberry Pi 3}
+sudo apt install libbluetooth-dev { not installed by default }
+sudo apt install libglib2.0-dev { gio-unix-2.0, gattlib, libpcre }
+cmake ..
+make
+cpack .. { does .deb package, fails on RPM }
+sudo dpkg -i gattlib_0.2-dev_armv7l.deb
+
+========================
+# Locate Bluetooth device
+#========================
+$ bluetoothctl
+[NEW] Controller B8:27:EB:EE:5B:63 raspberrypi [default]
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller B8:27:EB:EE:5B:63 Discovering: yes
+[NEW] Device 50:43:C2:47:4C:BB 50-43-C2-47-4C-BB
+[NEW] Device 4F:28:88:C2:76:8D 4F-28-88-C2-76-8D
+[NEW] Device 46:EB:DE:0D:9E:F0 46-EB-DE-0D-9E-F0
+[CHG] Device 50:43:C2:47:4C:BB RSSI: -78
+[NEW] Device 53:4C:65:04:49:A7 53-4C-65-04-49-A7
+[NEW] Device F9:6B:16:8A:BA:12 F9-6B-16-8A-BA-12
+[NEW] Device 0C:54:15:1B:DC:61 LPS-160389
+[NEW] Device F0:DF:10:55:E2:89 Thingy
+[NEW] Device F0:DF:10:55:E2:8A ThingyDfu
+
+$ hcitool lescan
+Set scan parameters failed: Operation not permitted
+$ sudo hcitool lescan
+LE Scan ...
+19:37:68:43:24:C4 (unknown)
+F0:DF:10:55:E2:8B (unknown)
+50:43:C2:47:4C:BB (unknown)
+50:43:C2:47:4C:BB (unknown)
+25:A5:CB:64:1C:5F (unknown)
+0D:65:71:A5:B2:81 (unknown)
+60:CB:E0:0A:24:8B (unknown)
+46:EB:DE:0D:9E:F0 (unknown)
+46:EB:DE:0D:9E:F0 (unknown)
+54:15:5C:68:23:3D (unknown)
+54:15:5C:68:23:3D (unknown)
+F0:DF:10:55:E2:89 Thingy
+F0:DF:10:55:E2:89 (unknown)
+53:4C:65:04:49:A7 (unknown)
+24:4B:03:E4:EB:88 (unknown)
+
+pi@raspberrypi:/epics/iocs/ThingyIOC/iocBoot/iocThingy $ sudo hcitool lescan
+LE Scan ...
+44:7C:A7:BE:95:91 (unknown)
+F0:DF:10:55:E2:8A ThingyDfu
+F0:DF:10:55:E2:8A (unknown)
+01:5E:20:4F:BE:48 (unknown)
+
+===================
+# Setup IOC
+===================
+Change st.cmd { point to executable on the 1st line }
+#!../../bin/linux-arm/thingy
+
+/epics/iocs/ThingyIOC/iocBoot/iocThingy $ ls ../../bin/linux-arm/thingy
+#!../../bin/linux-arm/thingy
+
