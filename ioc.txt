@@ -1,0 +1,121 @@
+pi@raspberrypi:/epics/iocs/ThingyIOC/iocBoot/iocThingy $ ./st.cmd 
+#!../../bin/linux-arm/thingy
+< envPaths
+epicsEnvSet("IOC","iocThingy")
+epicsEnvSet("TOP","/epics/iocs/ThingyIOC")
+epicsEnvSet("ASYN","/epics/support/asyn")
+epicsEnvSet("EPICS_BASE","/epics/base")
+## Register all support components
+dbLoadDatabase "/epics/iocs/ThingyIOC/dbd/thingy.dbd"
+thingy_registerRecordDeviceDriver pdbbase
+#thingyConfig("D3:69:D6:BA:E3:31")
+#Kaz Thingy  ("F0:DF:10:55:E2:89") -> F0:DF:10:55:E2:8A
+thingyConfig("F0:DF:10:55:E2:8A")
+## Load record instances
+dbLoadRecords "/epics/iocs/ThingyIOC/db/notifyNumber.db"
+dbLoadRecords "/epics/iocs/ThingyIOC/db/notifyString.db"
+dbLoadRecords "/epics/iocs/ThingyIOC/db/readwrite.db"
+iocInit
+Starting iocInit
+############################################################################
+## EPICS R7.0.2.2
+## EPICS Base built Apr 24 2019
+############################################################################
+iocRun: All initialization complete
+dbpf("XF:10IDB{THINGY:001}LEDReader.SCAN","10 second")
+DBF_STRING:         "10 second"         
+epics> ERROR: Failed to start notifications for UUID 0202 (pv XF:10IDB{THINGY:001}PressureNotifier)
+ERROR: Failed to start notifications for UUID 0404 (pv XF:10IDB{THINGY:001}QuaternionYNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}CompassXNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}GyroscopeYNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}AccelerationYNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}CompassYNotifier)
+ERROR: Failed to start notifications for UUID 0407 (pv XF:10IDB{THINGY:001}RollNotifier)
+ERROR: Failed to start notifications for UUID 0409 (pv XF:10IDB{THINGY:001}HeadingNotifier)
+ERROR: Failed to start notifications for UUID 040A (pv XF:10IDB{THINGY:001}GravityZNotifier)
+ERROR: Failed to start notifications for UUID 0204 (pv XF:10IDB{THINGY:001}AirQualityNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}GyroscopeZNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}GyroscopeXNotifier)
+ERROR: Failed to start notifications for UUID 0404 (pv XF:10IDB{THINGY:001}QuaternionWNotifier)
+ERROR: Failed to start notifications for UUID 040A (pv XF:10IDB{THINGY:001}GravityXNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}CompassZNotifier)
+ERROR: Failed to start notifications for UUID 0403 (pv XF:10IDB{THINGY:001}OrientationNotifier)
+ERROR: Failed to start notifications for UUID 0402 (pv XF:10IDB{THINGY:001}TapsNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}AccelerationZNotifier)
+ERROR: Failed to start notifications for UUID 0404 (pv XF:10IDB{THINGY:001}QuaternionXNotifier)
+ERROR: Failed to start notifications for UUID 0404 (pv XF:10IDB{THINGY:001}QuaternionZNotifier)
+ERROR: Failed to start notifications for UUID 040A (pv XF:10IDB{THINGY:001}GravityYNotifier)
+ERROR: Failed to start notifications for UUID 0201 (pv XF:10IDB{THINGY:001}TemperatureNotifier)
+ERROR: Failed to start notifications for UUID 0203 (pv XF:10IDB{THINGY:001}HumidityNotifier)
+ERROR: Failed to start notifications for UUID 0407 (pv XF:10IDB{THINGY:001}PitchNotifier)
+ERROR: Failed to start notifications for UUID 0302 (pv XF:10IDB{THINGY:001}ButtonNotifier)
+ERROR: Failed to start notifications for UUID 0405 (pv XF:10IDB{THINGY:001}StepsNotifier)
+ERROR: Failed to start notifications for UUID 0407 (pv XF:10IDB{THINGY:001}YawNotifier)
+ERROR: Failed to start notifications for UUID 0406 (pv XF:10IDB{THINGY:001}AccelerationXNotifier)
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+Read of uuid 0301 (pv XF:10IDB{THINGY:001}LEDReader) failed.
+Read of uuid 018015 (pv XF:10IDB{THINGY:001}BatteryReader) failed.
+

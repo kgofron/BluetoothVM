@@ -1,0 +1,64 @@
+pi@raspberrypi:/epics/iocs/ThingyIOC $ bluetoothctl
+[NEW] Controller B8:27:EB:EE:5B:63 raspberrypi [default]
+[NEW] Device F9:6B:16:8A:BA:12 vívosmart HR
+[NEW] Device 04:52:C7:C2:76:14 04-52-C7-C2-76-14
+[NEW] Device 76:16:BA:10:DA:EC 76-16-BA-10-DA-EC
+[NEW] Device 0C:54:15:1B:DC:61 LPS-160389
+[NEW] Device 24:4B:03:E4:EB:88 [TV] UN85JU7100
+[NEW] Device 50:43:C2:47:4C:BB 50-43-C2-47-4C-BB
+[NEW] Device 46:EB:DE:0D:9E:F0 46-EB-DE-0D-9E-F0
+[NEW] Device F0:DF:10:55:E2:8A ThingyDfu
+[CHG] Device F0:DF:10:55:E2:8A Connected: yes
+[NEW] Primary Service
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000a
+	00001801-0000-1000-8000-00805f9b34fb
+	Generic Attribute Profile
+[NEW] Primary Service
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b
+	0000fe59-0000-1000-8000-00805f9b34fb
+	Unknown
+[NEW] Characteristic
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000c
+	8ec90002-f315-4f60-9fb8-838830daea50
+	Vendor specific
+[NEW] Characteristic
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000e
+	8ec90001-f315-4f60-9fb8-838830daea50
+	Vendor specific
+[NEW] Descriptor
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000e/desc0010
+	00002902-0000-1000-8000-00805f9b34fb
+	Client Characteristic Configuration
+[CHG] Device F0:DF:10:55:E2:8A UUIDs: 00001800-0000-1000-8000-00805f9b34fb
+[CHG] Device F0:DF:10:55:E2:8A UUIDs: 00001801-0000-1000-8000-00805f9b34fb
+[CHG] Device F0:DF:10:55:E2:8A UUIDs: 0000fe59-0000-1000-8000-00805f9b34fb
+[CHG] Device F0:DF:10:55:E2:8A ServicesResolved: yes
+[DEL] Device 46:EB:DE:0D:9E:F0 46-EB-DE-0D-9E-F0
+[DEL] Device 50:43:C2:47:4C:BB 50-43-C2-47-4C-BB
+[DEL] Device 24:4B:03:E4:EB:88 [TV] UN85JU7100
+[DEL] Device 0C:54:15:1B:DC:61 LPS-160389
+[DEL] Device 76:16:BA:10:DA:EC 76-16-BA-10-DA-EC
+[DEL] Device 04:52:C7:C2:76:14 04-52-C7-C2-76-14
+[DEL] Device F9:6B:16:8A:BA:12 vívosmart HR
+[ThingyDfu]# quit
+[DEL] Controller B8:27:EB:EE:5B:63 raspberrypi [default]
+[DEL] Primary Service
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000a
+	00001801-0000-1000-8000-00805f9b34fb
+	Generic Attribute Profile
+[DEL] Primary Service
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b
+	0000fe59-0000-1000-8000-00805f9b34fb
+	Unknown
+[DEL] Characteristic
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000c
+	8ec90002-f315-4f60-9fb8-838830daea50
+	Vendor specific
+[DEL] Characteristic
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000e
+	8ec90001-f315-4f60-9fb8-838830daea50
+	Vendor specific
+[DEL] Descriptor
+	/org/bluez/hci0/dev_F0_DF_10_55_E2_8A/service000b/char000e/desc0010
+	00002902-0000-1000-8000-00805f9b34fb
+	Client Characteristic Configuration
