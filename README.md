@@ -1,6 +1,6 @@
 # BluetoothVM
 
-* The Bluetooth Thingy:52 settings.
+# The Bluetooth Thingy:52 settings.
 
 * Find Bluetooth Version on Windows 10
 
