@@ -10,22 +10,22 @@ https://www.thewindowsclub.com/how-to-check-bluetooth-version-in-windows-10
 
 https://scribles.net/enabling-bluetooth-in-virtualbox/
 
-**Thingy.IOC**
+* Thingy.IOC
 
 https://github.com/epicsNSLS2-sensors/ThingyIOC
 
-**The Bluetooth 5 Nordic stick.**
+* The Bluetooth 5 Nordic stick.
 
 Flush the generic firmware (Use Programmer app, then install zephyr.hex firmware).
  
 =====================================
-**USB Device is busy => see #7:**
+* USB Device is busy => see #7:
 
 https://forums.virtualbox.org/viewtopic.php?f=35&t=82639#p390404
 
 https://forums.virtualbox.org/viewtopic.php?f=3&t=92490&p=445326&hilit=bluetooth#p445326
 
-**USB Intel Bluetooth adapter:**
+* USB Intel Bluetooth adapter:
   
 ```
 c:\Program Files\Oracle\VirtualBox>VBoxManage.exe list usbhost
