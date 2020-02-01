@@ -1,12 +1,12 @@
 # BluetoothVM
 
-*The Bluetooth Thingy:52 settings.
+* The Bluetooth Thingy:52 settings.
 
-*Find Bluetooth Version on Windows 10
+* Find Bluetooth Version on Windows 10
 
 https://www.thewindowsclub.com/how-to-check-bluetooth-version-in-windows-10
 
-*Enable BLE in Ubuntu 18.04 guest on Windows 10 host:
+* Enable BLE in Ubuntu 18.04 guest on Windows 10 host:
 
 https://scribles.net/enabling-bluetooth-in-virtualbox/
 
