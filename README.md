@@ -1,4 +1,4 @@
-"# BluetoothVM" 
+# BluetoothVM
 
 The Bluetooth Thingy:52 settings.
 
@@ -20,7 +20,7 @@ USB Device is busy => see #7: https://forums.virtualbox.org/viewtopic.php?f=35&t
 https://forums.virtualbox.org/viewtopic.php?f=3&t=92490&p=445326&hilit=bluetooth#p445326
 USB Intel Bluetooth adapter:
   
-
+```
 c:\Program Files\Oracle\VirtualBox>VBoxManage.exe list usbhost
 Host USB Devices:
 
@@ -75,14 +75,18 @@ USB version/speed:  2/High
 Manufacturer:       Quanta Computer, Inc.
 Address:            {36fc9e60-c465-11cf-8056-444553540000}\0006
 Current State:      Busy
+```
 ==========================================================
+```
 c:\Program Files\Oracle\VirtualBox>vboxmanage showvminfo
 Usage:
 
 VBoxManage showvminfo       <uuid|vmname> [--details]
                             [--machinereadable]
 VBoxManage showvminfo       <uuid|vmname> --log <idx>
+```
 =================================
+```
 c:\Program Files\Oracle\VirtualBox>vboxmanage showvminfo ubuntu18
 Name:                        ubuntu18
 Groups:                      /
@@ -247,5 +251,5 @@ Facility "VirtualBox System Service": active/running (last update: 2019/04/21 02
 Facility "Seamless Mode": active/running (last update: 2019/04/21 02:36:05 UTC)
 Facility "Graphics Mode": active/running (last update: 2019/04/21 02:36:05 UTC)
 
-
+```
 
